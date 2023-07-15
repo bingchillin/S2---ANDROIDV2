@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ap_nav"
+    app:startDestination="@id/productsListFragment">
+
+    <fragment
+        android:id="@+id/productsListFragment"
+        android:name="com.example.firstandroidapp.ProductsListFragment"
+        android:label="ProductsListFragment" >
+        <action
+            android:id="@+id/action_productsListFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.firstandroidapp.ProductFragment"
+        android:label="ProductFragment" >
+        <argument
+            android:name="barcode"
+            app:argType="string" />
+    </fragment>
+</navigation>
